@@ -7,3 +7,17 @@
 //
 
 import Foundation
+import SwiftUI
+
+protocol FeedFlowState: ObservableObject {}
+
+struct FeedFlowCoordinator<State: FeedFlowState, Content: View>: View {
+    @ObservedObject var state: State
+    let content: () -> Content
+    
+    var body: some View {
+        NavigationStack {
+            content()
+        }
+    }
+}

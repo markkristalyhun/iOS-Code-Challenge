@@ -7,3 +7,23 @@
 //
 
 import Foundation
+
+protocol FeedViewModelType: ObservableObject {
+    var tweets: [Tweet] { get }
+    func logout()
+}
+
+class FeedViewModel: FeedViewModelType, FeedFlowState {
+    private let twitterClient: TwitterClientType
+    
+    @Published var tweets: [Tweet]
+    
+    init(twitterClient: TwitterClientType) {
+        self.twitterClient = twitterClient
+        tweets = twitterClient.loadTimeline()
+    }
+    
+    func logout() {
+        twitterClient.logOut()
+    }
+}

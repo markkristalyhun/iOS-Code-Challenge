@@ -8,3 +8,5 @@
 "login.user.placeholder" = "Username";
 "login.password.placeholder" = "Password";
 "login.button" = "Login";
+"logout.button" = "Log out";
+"feed.title" = "Timeline";

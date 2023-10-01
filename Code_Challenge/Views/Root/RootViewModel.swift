@@ -28,10 +28,6 @@ class RootViewModel: RootViewModelType, RootFlowCoordinatorStateType {
         listenLoginValue()
     }
     
-    func getLoginViewModel() -> any LoginFlowStateType & LoginViewModelType {
-        LoginViewModel(twitterClient: Container.shared.resolve(TwitterClientType.self)!)
-    }
-    
     private func listenLoginValue() {
         self.twitterClient.isLoggedIn.bind(to: self, keyPath: \.isLoggedIn)
     }

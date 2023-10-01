@@ -33,7 +33,8 @@ struct RootFlowCoordinator<State: RootFlowCoordinatorStateType>: View {
     }
     
     private func feedDestination() -> some View {
-        return FeedView()
+        let viewModel = FeedViewModel(twitterClient: Container.shared.resolve(TwitterClientType.self)!)
+        return FeedView(viewModel: viewModel)
     }
     
     private func loginDestination() -> some View {
