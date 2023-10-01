@@ -6,11 +6,13 @@ PODS:
   - Nimble (9.2.1)
   - Quick (4.0.0)
   - ReactiveKit (3.17.4)
+  - Swinject (2.8.3)
 
 DEPENDENCIES:
   - Bond (= 7.8.1)
   - Nimble (= 9.2.1)
   - Quick (= 4.0.0)
+  - Swinject (= 2.8.3)
 
 SPEC REPOS:
   trunk:
@@ -19,6 +21,7 @@ SPEC REPOS:
     - Nimble
     - Quick
     - ReactiveKit
+    - Swinject
 
 SPEC CHECKSUMS:
   Bond: 87075c7f20f37ea3e73dc7057fce839787bf46eb
@@ -26,7 +29,8 @@ SPEC CHECKSUMS:
   Nimble: e7e615c0335ee4bf5b0d786685451e62746117d5
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   ReactiveKit: f9f9e079efa39312c597bf1508ef4810d111ce76
+  Swinject: 893c9a543000ac2f10ee4cbaf0933c6992c935d5
 
-PODFILE CHECKSUM: 96f952033535fbd3b675b5ec09221a14e04aaa80
+PODFILE CHECKSUM: 5889577322f53af192d7c1446a08cf4a276572d9
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3
