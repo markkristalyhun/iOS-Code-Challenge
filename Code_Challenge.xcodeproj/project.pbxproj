@@ -22,6 +22,9 @@
 		6E9552692AC8AA4900CFB729 /* RootFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9552682AC8AA4900CFB729 /* RootFlowCoordinator.swift */; };
 		6E95526C2AC8ADE700CFB729 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95526B2AC8ADE700CFB729 /* LoginView.swift */; };
 		6E95526E2AC8ADF900CFB729 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95526D2AC8ADF900CFB729 /* FeedView.swift */; };
+		6EB6EA9F2ACB791F00446483 /* RootViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6EA9E2ACB791F00446483 /* RootViewModelSpec.swift */; };
+		6EB6EAA12ACB7DCD00446483 /* FeedViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6EAA02ACB7DCD00446483 /* FeedViewModelSpec.swift */; };
+		6EB6EAA32ACB864500446483 /* LoginViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6EAA22ACB864500446483 /* LoginViewModelSpec.swift */; };
 		E39AD7CD50228EC0EFF63D84 /* Pods_Code_ChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DCB362D8C5DED6F5762BA72 /* Pods_Code_ChallengeTests.framework */; };
 		E5391C1721AB788E0052B1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5391C1621AB788E0052B1EA /* AppDelegate.swift */; };
 		E5391C1E21AB788E0052B1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5391C1D21AB788E0052B1EA /* Assets.xcassets */; };
@@ -63,6 +66,9 @@
 		6E9552682AC8AA4900CFB729 /* RootFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFlowCoordinator.swift; sourceTree = "<group>"; };
 		6E95526B2AC8ADE700CFB729 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		6E95526D2AC8ADF900CFB729 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
+		6EB6EA9E2ACB791F00446483 /* RootViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModelSpec.swift; sourceTree = "<group>"; };
+		6EB6EAA02ACB7DCD00446483 /* FeedViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModelSpec.swift; sourceTree = "<group>"; };
+		6EB6EAA22ACB864500446483 /* LoginViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelSpec.swift; sourceTree = "<group>"; };
 		BE971E724CEA89C7D2105846 /* Pods-Code_Challenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Code_Challenge.release.xcconfig"; path = "Target Support Files/Pods-Code_Challenge/Pods-Code_Challenge.release.xcconfig"; sourceTree = "<group>"; };
 		E5391C1321AB788E0052B1EA /* Code_Challenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Code_Challenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5391C1621AB788E0052B1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -161,6 +167,16 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
+		6EB6EA9D2ACB790000446483 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				6EB6EA9E2ACB791F00446483 /* RootViewModelSpec.swift */,
+				6EB6EAA02ACB7DCD00446483 /* FeedViewModelSpec.swift */,
+				6EB6EAA22ACB864500446483 /* LoginViewModelSpec.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		A52B02F3C455D3E6A617D8B8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +261,7 @@
 		E5391C4021AB79E30052B1EA /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				6EB6EA9D2ACB790000446483 /* ViewModels */,
 				E5391C4221AB79F10052B1EA /* Services */,
 			);
 			path = Tests;
@@ -481,7 +498,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EB6EAA12ACB7DCD00446483 /* FeedViewModelSpec.swift in Sources */,
 				E5391C4621AB7A180052B1EA /* TwitterClientSpec.swift in Sources */,
+				6EB6EA9F2ACB791F00446483 /* RootViewModelSpec.swift in Sources */,
+				6EB6EAA32ACB864500446483 /* LoginViewModelSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
