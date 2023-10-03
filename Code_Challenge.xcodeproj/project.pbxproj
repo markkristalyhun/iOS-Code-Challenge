@@ -14,10 +14,10 @@
 		6E616EB02ACA0879005A149C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6E616EAF2ACA0879005A149C /* Localizable.strings */; };
 		6E616EB32ACA18C8005A149C /* FeedFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E616EB22ACA18C8005A149C /* FeedFlowCoordinator.swift */; };
 		6E616EB52ACA18DA005A149C /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E616EB42ACA18DA005A149C /* FeedViewModel.swift */; };
-		6E616EB72ACA2190005A149C /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E616EB62ACA2190005A149C /* ViewExtensions.swift */; };
 		6E8A95972AC9D44300233FF1 /* ContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A95962AC9D44300233FF1 /* ContainerExtensions.swift */; };
 		6E8A95992AC9D4E100233FF1 /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A95982AC9D4E100233FF1 /* RootViewModel.swift */; };
 		6E8A959B2AC9DCAB00233FF1 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8A959A2AC9DCAB00233FF1 /* RootView.swift */; };
+		6E8E18BC2ACCD400006B9B6B /* FeedListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E8E18BB2ACCD400006B9B6B /* FeedListItem.swift */; };
 		6E9552652AC87A9200CFB729 /* CodeChallengeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9552642AC87A9200CFB729 /* CodeChallengeApp.swift */; };
 		6E9552692AC8AA4900CFB729 /* RootFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9552682AC8AA4900CFB729 /* RootFlowCoordinator.swift */; };
 		6E95526C2AC8ADE700CFB729 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E95526B2AC8ADE700CFB729 /* LoginView.swift */; };
@@ -58,10 +58,10 @@
 		6E616EAF2ACA0879005A149C /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		6E616EB22ACA18C8005A149C /* FeedFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFlowCoordinator.swift; sourceTree = "<group>"; };
 		6E616EB42ACA18DA005A149C /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
-		6E616EB62ACA2190005A149C /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		6E8A95962AC9D44300233FF1 /* ContainerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerExtensions.swift; sourceTree = "<group>"; };
 		6E8A95982AC9D4E100233FF1 /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		6E8A959A2AC9DCAB00233FF1 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		6E8E18BB2ACCD400006B9B6B /* FeedListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedListItem.swift; sourceTree = "<group>"; };
 		6E9552642AC87A9200CFB729 /* CodeChallengeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChallengeApp.swift; sourceTree = "<group>"; };
 		6E9552682AC8AA4900CFB729 /* RootFlowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootFlowCoordinator.swift; sourceTree = "<group>"; };
 		6E95526B2AC8ADE700CFB729 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -136,6 +136,7 @@
 				6E95526D2AC8ADF900CFB729 /* FeedView.swift */,
 				6E616EB22ACA18C8005A149C /* FeedFlowCoordinator.swift */,
 				6E616EB42ACA18DA005A149C /* FeedViewModel.swift */,
+				6E8E18BB2ACCD400006B9B6B /* FeedListItem.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -145,7 +146,6 @@
 			children = (
 				6E8A95962AC9D44300233FF1 /* ContainerExtensions.swift */,
 				6E616EAD2ACA01DE005A149C /* ColorExtensions.swift */,
-				6E616EB62ACA2190005A149C /* ViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -158,13 +158,6 @@
 				6E8A95932AC9D00F00233FF1 /* Login */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		6E9552672AC87C1F00CFB729 /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		6EB6EA9D2ACB790000446483 /* ViewModels */ = {
@@ -212,7 +205,6 @@
 			children = (
 				6E616EAA2ACA0139005A149C /* Style */,
 				6E8A95952AC9D38100233FF1 /* Extensions */,
-				6E9552672AC87C1F00CFB729 /* Coordinator */,
 				6E9552662AC87C0D00CFB729 /* Views */,
 				E5391C3A21AB799D0052B1EA /* Models */,
 				E5391C3B21AB79A40052B1EA /* Services */,
@@ -486,9 +478,9 @@
 				6E616EAC2ACA0146005A149C /* Colors.swift in Sources */,
 				6E9552692AC8AA4900CFB729 /* RootFlowCoordinator.swift in Sources */,
 				E5391C3D21AB79D10052B1EA /* TwitterClient.swift in Sources */,
-				6E616EB72ACA2190005A149C /* ViewExtensions.swift in Sources */,
 				E5391C1721AB788E0052B1EA /* AppDelegate.swift in Sources */,
 				6E8A95972AC9D44300233FF1 /* ContainerExtensions.swift in Sources */,
+				6E8E18BC2ACCD400006B9B6B /* FeedListItem.swift in Sources */,
 				6E616EB52ACA18DA005A149C /* FeedViewModel.swift in Sources */,
 				6E616EAE2ACA01DE005A149C /* ColorExtensions.swift in Sources */,
 			);

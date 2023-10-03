@@ -23,8 +23,8 @@ struct LoginView<VM: LoginViewModelType & LoginFlowStateType>: View {
             Colors.primary.overlay(
                 VStack(alignment: .center, spacing: 20) {
                     Group {
-                        TextField("login.user.placeholder", text: $userName)
-                        SecureField("login.password.placeholder", text: $password)
+                        TextField("", text: $userName, prompt: Text("login.user.placeholder").foregroundColor(Colors.placeholder))
+                        SecureField("", text: $password, prompt: Text("login.password.placeholder").foregroundColor(Colors.placeholder))
                     }
                     .autocapitalization(.none)
                     .padding(.all, 8)
@@ -48,8 +48,3 @@ struct LoginView<VM: LoginViewModelType & LoginFlowStateType>: View {
         }
     }
 }
-
-
-//#Preview {
-//    LoginView()
-//}

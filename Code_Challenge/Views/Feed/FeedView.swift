@@ -20,15 +20,7 @@ struct FeedView<VM: FeedViewModelType & FeedFlowState>: View {
             List {
                 ForEach(viewModel.tweets, id: \.id) { tweet in
                     VStack(alignment: .leading, spacing: 20) {
-                        VStack(alignment: .leading, spacing: 10) {
-                            Group {
-                                Text(tweet.user)
-                                    .fontWeight(.bold)
-                                Text(tweet.content)
-                            }
-                            .foregroundColor(Colors.font)
-                        }
-                        .padding(EdgeInsets(top: 0, leading: 20, bottom: 0, trailing: 20))
+                        FeedListItem(userName: tweet.user, tweet: tweet.content)
                         Divider()
                             .frame(width: metrics.size.width, height: 0.5)
                             .overlay(Colors.font)
@@ -54,7 +46,3 @@ struct FeedView<VM: FeedViewModelType & FeedFlowState>: View {
         }
     }
 }
-
-//#Preview {
-//    FeedView()
-//}
